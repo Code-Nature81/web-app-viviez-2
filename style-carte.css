@@ -1,0 +1,337 @@
+:root{
+    --container-bg-color:#333;
+    --left-bg-color: rgba(165, 42, 42, 0.478);
+    --left-button-hover-color: rgba(124, 6, 6, 0.349);
+    --right-bg-color: rgba(36, 35, 35, 0.587);
+    --right-button-hover-color: rgba(92,92,92,0.3);
+    --hover-width: 75%;
+    --other-width: 25%;
+    --speed: 1000ms;
+}
+
+html, body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+h1{
+    font-size: 4rem;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    text-align: center;
+}
+
+.button{
+    
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    height: 2.5rem;
+    padding-top: 1.3rem;
+    width: 15rem;
+    text-align: center;
+    color: #fff;
+    border-color: #fff; 
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    /*text-decoration: none ;*/
+    transform: translateX(-50%);
+}
+
+.split.left .button:hover{
+    background-color: var(--left-button-hover-color);
+    border-color: var(--left-button-hover-color);
+}
+
+.split.right .button:hover{
+    background-color: var(--right-button-hover-color);
+    border-color: var(--right-button-hover-color);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--container-bg-color);
+}
+
+.split{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.split.left{
+    left:0;
+    background: url('usine.png') center center no-repeat;
+    background-size: cover;
+}
+
+.split.left:before{
+    position: absolute;
+    content:"";
+    width: 100%;
+    height: 100%;
+    background: var(--left-bg-color);
+}
+
+.split.right{
+    right:0;
+    background: url('chevalblanc.png') center center no-repeat;
+    background-size: cover;
+}
+
+.split.right:before{
+    position: absolute;
+    content:"";
+    width: 100%;
+    height: 100%;
+    background: var(--right-bg-color);
+}
+
+.split.left, .split.right, .split.right:before, .split.left:before{
+    transition: var(--speed) all ease-in-out;
+}
+
+.hover-left .left{
+    width: var(--hover-width);
+}
+
+.hover-left .right{
+    width:var(--other-width);
+}
+
+.hover-left .right:before{
+    z-index: 2;
+}
+
+.hover-right .right{
+    width: var(--hover-width);
+}
+
+.hover-right .left{
+    width:var(--other-width);
+}
+
+.hover-right .left:before{
+    z-index: 2;
+}
+
+#piedpage {
+	
+    bottom: 0; left: 0;
+    width: 100%;
+    background-color: #000000;;
+    height: 85px;
+    border-top: #ffffff solid 1px;
+    border-bottom: #000000;
+    position: fixed;
+}
+
+.btnplan {
+
+    border: 0;
+    line-height: 4;
+    padding:26px 10px;
+    font-size: 1rem;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    margin-left: 2px;
+    margin-top: 1px;
+    color: darkgoldenrod;
+    /*text-shadow: 1px 1px 1px #000;*/
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    /*background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));*/
+    /*box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);*/
+    width: 17%;
+    background-image: url(https://api.iconify.design/gis:map-route.svg?color=%23b8860b);
+    background-repeat: no-repeat;
+    background-position: 50% 13px;
+    background-size: 32px;
+    
+}
+
+.btninfo{
+    border: 0;
+    line-height: 4;
+    padding:26px 10px;
+    font-size: 1rem;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    margin-left: -2px;
+    margin-top: 1px;
+    color: rgb(255, 255, 255);
+    /*text-shadow: 1px 1px 1px #000;*/
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    /*background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));*/
+    /*box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);*/
+    width: 19.3%;
+    background-image: url(https://api.iconify.design/gis:360.svg?color=%23ffffff);
+    background-repeat: no-repeat;
+    background-position: 55% 15px;
+    background-size: 33px;
+    
+    
+}
+
+.btnvillage{
+    border: 0;
+    line-height: 4;
+    padding:26px 10px;
+    font-size: 1rem;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    margin-left: 2px;
+    margin-top: 1px;
+    color: #ffffff;
+    /*text-shadow: 1px 1px 1px #000;*/
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    /*background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));*/
+    /*box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);*/
+    width: 17%;
+    background-image: url(https://api.iconify.design/gis:globe-alt-o.svg?color=%23ffffff);
+    background-repeat: no-repeat;
+    background-position: 50% 10px;
+    background-size: 33px;
+    
+    
+}
+
+.btncollec{
+    border: 0;
+    line-height: 4;
+    padding:26px 10px;
+    font-size: 1rem;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    margin-left: 2px;
+    margin-top: 1px;
+    color: rgb(255, 255, 255);
+    /*text-shadow: 1px 1px 1px #000;*/
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    /*background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));*/
+    /*box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);*/
+    width: 17%;
+    background-image: url(https://api.iconify.design/heroicons-outline:book-open.svg?color=%23ffffff);
+    background-repeat: no-repeat;
+    background-position: 50% 10px;
+    background-size: 35px;
+    
+    
+}
+
+.btnvisite{
+    border: 0;
+    line-height: 4;
+    padding:26px 10px;
+    font-size: 1rem;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    margin-left: 2px;
+    margin-top: 1px;
+    color: rgb(255, 255, 255);
+    /*text-shadow: 1px 1px 1px #000;*/
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    /*background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));*/
+    /*box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);*/
+    width: 17%;
+    background-image: url(https://api.iconify.design/fad:logo-audacity.svg?color=%23ffffff);
+    background-repeat: no-repeat;
+    background-position: 50% 10px;
+    background-size: 41px;
+    
+    
+}
+
+footer{
+    text-align: center;
+    position: fixed;
+}
+
+@media(max-width:800px){
+    
+
+    .button{
+        width: 12rem;
+    }
+
+    
+}
+
+@media(max-height: 700px){
+    .button{
+        top: 40%;
+    }
+}
+
+@media screen and (min-width:385px) and (max-width:769px){
+
+    .split.right{
+        right:0;
+        background: url('chevalblanc.png') center center no-repeat;
+        background-size: 200px;
+    }
+
+    h1{
+        font-size: 1.3rem;
+    }
+    
+}
+
+@media screen and (min-width:220px) and (max-width:386px){
+
+    .split.right{
+        right:0;
+        background: url('chevalblanc.png') center center no-repeat;
+        background-size: 120px;
+    }
+
+    h1{
+        font-size: 1rem;
+    }
+    
+    
+}
+
+@media screen and (min-width:770px) and (max-width:1282px){
+
+    .split.right{
+        right:0;
+        background: url('chevalblanc.png') center center no-repeat;
+        background-size: 400px;
+    }
+
+    h1{
+        font-size: 1.2rem;
+    }
+    
+}
+
+@media screen and  (min-width:1023px) {
+
+    .btninfo{
+        background-position: 49% 15px;
+     }
+
+    }
