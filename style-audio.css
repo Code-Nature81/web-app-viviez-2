@@ -74,7 +74,7 @@ h1{
 
 .split.left{
     left:0;
-    background: url('usine.png') center center no-repeat;
+    background: url('gif2-audio.gif') center center no-repeat;
     background-size: cover;
 }
 
@@ -88,7 +88,7 @@ h1{
 
 .split.right{
     right:0;
-    background: url('chevalblanc.png') center center no-repeat;
+    background: url('gif1-audio.gif') center center no-repeat;
     background-size: cover;
 }
 
@@ -289,8 +289,14 @@ footer{
 
     .split.right{
         right:0;
-        background: url('chevalblanc.png') center center no-repeat;
-        background-size: 200px;
+        background: url('gif1-audio.gif') center center no-repeat;
+        background-size: 580px;
+    }
+
+    .split.left{
+        left:0;
+        background: url('gif2-audio.gif') center center no-repeat;
+        background-size: 580px;
     }
 
     h1{
@@ -303,8 +309,14 @@ footer{
 
     .split.right{
         right:0;
-        background: url('chevalblanc.png') center center no-repeat;
-        background-size: 120px;
+        background: url('gif1-audio.gif') center center no-repeat;
+        background-size: 350px;
+    }
+
+    .split.left{
+        left:0;
+        background: url('gif2-audio.gif') center center no-repeat;
+        background-size: 350px;
     }
 
     h1{
@@ -316,11 +328,7 @@ footer{
 
 @media screen and (min-width:770px) and (max-width:1282px){
 
-    .split.right{
-        right:0;
-        background: url('chevalblanc.png') center center no-repeat;
-        background-size: 400px;
-    }
+    
 
     h1{
         font-size: 1.2rem;
